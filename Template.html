@@ -11,6 +11,7 @@ p {
   line-height: 1.5;
   padding: 0;
   margin: 0;
+  white-space: normal;
 }
 
 .land-banner-img {
@@ -92,7 +93,7 @@ p {
 }
 
 .land-block-ico img {
-  width: 60%;
+  width: 50%;
   text-align: center;
   margin: 0 auto;
   transition-duration: 1s;
@@ -210,6 +211,14 @@ p {
   font-size: 1.5rem;
 }
 
+.land-article {
+  display: block;
+}
+
+.land-article img {
+  width: 100%;
+}
+
 /* xs (<=543px) */
 @media (max-width: 575px) { 
 
@@ -231,6 +240,10 @@ p {
 
   .land-block-ico a {
     font-size: 1.7rem;
+  }
+
+  .land-block-ico img {
+    width: 30%;
   }
 
  }
@@ -256,6 +269,10 @@ p {
 
   .land-block-ico a {
     font-size: 1.5rem;
+  }
+
+  .land-block-ico img {
+    width: 35%;
   }
 
  }
@@ -311,9 +328,12 @@ p {
  }
 
 /* xl (>=1200) */
-@media (min-width: 1200px) { ... }
+@media (min-width: 1200px) { }
 
 </style>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 
 <div class="row">
@@ -378,7 +398,7 @@ p {
   </div>
  
     
-  <div class="col-md-4">
+  <div class="col-md-4 col-sm-6">
     <a href="#" class="land-block-category-img_text">
     <img src="https://product-wso.ru/image/catalog/img/img-design/ico1.png">
     <p>
@@ -388,7 +408,7 @@ p {
     </a>
   </div>
     
-  <div class="col-md-4">
+  <div class="col-md-4 col-sm-6">
     <a href="#" class="land-block-category-img_text">
     <img src="https://product-wso.ru/image/catalog/img/img-design/ico2.png">
     <p>
@@ -398,7 +418,7 @@ p {
     </a>
   </div>
     
-  <div class="col-md-4">
+  <div class="col-md-4 col-sm-6">
     <a href="#" class="land-block-category-img_text">
     <img src="https://product-wso.ru/image/catalog/img/img-design/ico3.png">
     <p>
@@ -408,7 +428,7 @@ p {
     </a>
   </div>
     
-  <div class="col-md-4">
+  <div class="col-md-4 col-sm-6">
     <a href="#" class="land-block-category-img_text">
     <img src="https://product-wso.ru/image/catalog/img/img-design/ico4.png" style="width: 60%;">
     <p>
@@ -417,7 +437,7 @@ p {
     </a>
   </div>
     
-  <div class="col-md-4">
+  <div class="col-md-4 col-sm-6">
     <a href="#" class="land-block-category-img_text">
     <img src="https://product-wso.ru/image/catalog/img/img-design/ico5.png">
     <p>
@@ -426,7 +446,7 @@ p {
     </a>
   </div>
     
-  <div class="col-md-4">
+  <div class="col-md-4 col-sm-6">
     <a href="#" class="land-block-category-img_text">
     <img src="https://product-wso.ru/image/catalog/img/img-design/ico6.png">
     <p>
@@ -452,23 +472,23 @@ p {
 </div>
   
 <div class="row">
-  <div class="col-md-4">
+  <div class="col-md-4 col-sm-6">
     <div class="land-block-ico">
       <img src="https://product-wso.ru/image/catalog/img/img-design/ico1.png">
-      <h5>Удобные в управлении</h5>
+      <h4>Удобные в управлении</h4>
     </div>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-4 col-sm-6">
     <div class="land-block-ico">
       <img src="https://product-wso.ru/image/catalog/img/img-design/ico2.png">
-       <h5>Безопасные при катании</h5>
+       <h4>Безопасные при катании</h4>
     </div>
   </div>
     
-  <div class="col-md-4">
+  <div class="col-md-4 col-sm-6">
     <div class="land-block-ico">
       <img src="https://product-wso.ru/image/catalog/img/img-design/ico3.png" >
-      <h5>Эргономичный дизайн</h5>
+      <h4>Эргономичный дизайн</h4>
     </div>
   </div>
 </div>
@@ -489,22 +509,22 @@ p {
   
 <div class="row">
 
-  <div class="col-md-3">
+  <div class="col-md-3 col-sm-6">
     <div class="land-block-category-img">
       <img src="https://product-wso.ru/image/catalog/img/img-design/category-1.png">
     </div>
   </div>
-  <div class="col-md-3">
+  <div class="col-md-3 col-sm-6">
     <div class="land-block-category-img">
     <img src="https://product-wso.ru/image/catalog/img/img-design/category-2.png">
     </div>
   </div>
-  <div class="col-md-3">
+  <div class="col-md-3 col-sm-6">
     <div class="land-block-category-img">
       <img src="https://product-wso.ru/image/catalog/img/img-design/category-3.png">
     </div>
    </div>
-  <div class="col-md-3">
+  <div class="col-md-3 col-sm-6">
       <div class="land-block-category-img">
         <img src="https://product-wso.ru/image/catalog/img/img-design/category-4.png">
       </div>
@@ -561,7 +581,7 @@ p {
   <div class="col-md-4">
     <div class="land-block-ico">
       <div class="col-md-12">
-        <img src="https://product-wso.ru/image/catalog/img/img-design/pointer.png" style="width: 50%;">
+        <img src="https://product-wso.ru/image/catalog/img/img-design/pointer.png">
       </div>
         <p>
           Саратов, улица имени Н.Г. Чернышевского, 94к7
@@ -572,7 +592,7 @@ p {
   <div class="col-md-4">
     <div class="land-block-ico">
       <div class="col-md-12">
-        <img src="https://product-wso.ru/image/catalog/img/img-design/mail.png" style="width: 50%;">
+        <img src="https://product-wso.ru/image/catalog/img/img-design/mail.png">
       </div>
         <a href="mailto:info@motofishka24.ru">
           info@motofishka24.ru
@@ -583,7 +603,7 @@ p {
   <div class="col-md-4">
     <div class="land-block-ico">
       <div class="col-md-12">
-        <img src="https://product-wso.ru/image/catalog/img/img-design/phone.png" style="width: 50%;">
+        <img src="https://product-wso.ru/image/catalog/img/img-design/phone.png">
       </div>
         <a href="tel:+ 7 (800) 707-54-36">
           +7 (800) 707-54-36
@@ -594,43 +614,67 @@ p {
 </div>
 
 <div class="row">
-  <div class="col-md-12">
-    <div class="land-banner-img">
-      <img src="https://product-wso.ru/image/catalog/img/img-design/row100.png" style="width: 100%;">
+  <div class="land-article">
+    <div class="row">
+    <div class="col-sm-6">
+      <img src="https://product-wso.ru/image/catalog/img/img-design/category-1.png">
     </div>
-  </div>
-    
-  <div class="col-md-4">
-    <div class="land-block-ico-fontawesome">
-      <div class="col-md-12">
-        <i class="fa fa-map-marker" aria-hidden="true"></i>
-      </div>
-        <p>
-          Саратов, улица имени Н.Г. Чернышевского, 94к7
-        </p>
+    <div class="col-sm-6">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia totam deleniti, deserunt corporis aspernatur pariatur, repudiandae labore obcaecati quod eligendi quia modi praesentium ratione nam recusandae blanditiis doloribus reprehenderit iusto?
+        Consequuntur minus possimus molestiae temporibus voluptatibus consequatur tenetur, nostrum dolores repudiandae dicta earum libero ullam, velit excepturi. Laboriosam hic ipsa reprehenderit quidem. Consequuntur eum asperiores ipsa ex sapiente quos ipsam?
+        Non impedit excepturi labore quod, blanditiis tempora minus cum eum magnam perspiciatis dolorum maxime, debitis ratione consequatur asperiores neque quas molestias nam necessitatibus architecto, voluptates eligendi! Nam deleniti a soluta!
+        Magni ex, earum illo reprehenderit ad libero, voluptatum hic iste veniam soluta quibusdam deserunt nostrum iusto, dicta exercitationem omnis ipsum. Delectus repellendus mollitia eveniet. Praesentium repellat tempore porro quod quis.
+        Dolor quis vel et sed inventore! Eligendi et molestias odit. Ex in quam nostrum animi distinctio natus facere neque accusantium perspiciatis! Accusantium, esse nam consequuntur iure maiores quisquam fugit ratione.
+        Obcaecati asperiores quaerat dolorum voluptatum non omnis? Velit quasi ab est nobis nulla illo temporibus soluta hic magnam ea odio, earum ad libero quia laborum provident iste in, eos qui?
+      </p>
     </div>
-  </div>
-    
-  <div class="col-md-4">
-    <div class="land-block-ico-fontawesome">
-      <div class="col-md-12">
-        <i class="fa fa-envelope" aria-hidden="true"></i>
-      </div>
-        <a href="mailto:info@motofishka24.ru">
-          info@motofishka24.ru
-        </a>
     </div>
-  </div>
-    
-  <div class="col-md-4">
-    <div class="land-block-ico-fontawesome">
-      <div class="col-md-12">
-        <i class="fa fa-phone" aria-hidden="true"></i>
-      </div>
-        <a href="tel:+ 7 (800) 707-54-36">
-          +7 (800) 707-54-36
-        </a>
+  </div>    
+</div>
+
+<div class="row">
+  <div class="col-md-12"><p>&nbsp;</p></div>
+</div>
+
+<div class="row">
+  <div class="land-article">
+    <div class="row">
+    <div class="col-sm-6">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia totam deleniti, deserunt corporis aspernatur pariatur, repudiandae labore obcaecati quod eligendi quia modi praesentium ratione nam recusandae blanditiis doloribus reprehenderit iusto?
+        Consequuntur minus possimus molestiae temporibus voluptatibus consequatur tenetur, nostrum dolores repudiandae dicta earum libero ullam, velit excepturi. Laboriosam hic ipsa reprehenderit quidem. Consequuntur eum asperiores ipsa ex sapiente quos ipsam?
+        Non impedit excepturi labore quod, blanditiis tempora minus cum eum magnam perspiciatis dolorum maxime, debitis ratione consequatur asperiores neque quas molestias nam necessitatibus architecto, voluptates eligendi! Nam deleniti a soluta!
+        Magni ex, earum illo reprehenderit ad libero, voluptatum hic iste veniam soluta quibusdam deserunt nostrum iusto, dicta exercitationem omnis ipsum. Delectus repellendus mollitia eveniet. Praesentium repellat tempore porro quod quis.
+        Dolor quis vel et sed inventore! Eligendi et molestias odit. Ex in quam nostrum animi distinctio natus facere neque accusantium perspiciatis! Accusantium, esse nam consequuntur iure maiores quisquam fugit ratione.
+        Obcaecati asperiores quaerat dolorum voluptatum non omnis? Velit quasi ab est nobis nulla illo temporibus soluta hic magnam ea odio, earum ad libero quia laborum provident iste in, eos qui?
+      </p>
     </div>
-   </div>
-    
+    <div class="col-sm-6">
+
+      <img src="https://product-wso.ru/image/catalog/img/img-design/category-1.png">
+    </div>
+    </div>
+  </div>    
+</div>
+
+<div class="row">
+  <div class="land-article">
+    <div class="row">
+    <div class="col-sm-6">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia totam deleniti, deserunt corporis aspernatur pariatur, repudiandae labore obcaecati quod eligendi quia modi praesentium ratione nam recusandae blanditiis doloribus reprehenderit iusto?
+        Consequuntur minus possimus molestiae temporibus voluptatibus consequatur tenetur, nostrum dolores repudiandae dicta earum libero ullam, velit excepturi. Laboriosam hic ipsa reprehenderit quidem. Consequuntur eum asperiores ipsa ex sapiente quos ipsam?
+        Non impedit excepturi labore quod, blanditiis tempora minus cum eum magnam perspiciatis dolorum maxime, debitis ratione consequatur asperiores neque quas molestias nam necessitatibus architecto, voluptates eligendi! Nam deleniti a soluta!
+        Magni ex, earum illo reprehenderit ad libero, voluptatum hic iste veniam soluta quibusdam deserunt nostrum iusto, dicta exercitationem omnis ipsum. Delectus repellendus mollitia eveniet. Praesentium repellat tempore porro quod quis.
+        Dolor quis vel et sed inventore! Eligendi et molestias odit. Ex in quam nostrum animi distinctio natus facere neque accusantium perspiciatis! Accusantium, esse nam consequuntur iure maiores quisquam fugit ratione.
+        Obcaecati asperiores quaerat dolorum voluptatum non omnis? Velit quasi ab est nobis nulla illo temporibus soluta hic magnam ea odio, earum ad libero quia laborum provident iste in, eos qui?
+      </p>
+    </div>
+    <div class="col-sm-6">
+
+      <img src="https://product-wso.ru/image/catalog/img/img-design/category-1.png">
+    </div>
+    </div>
+  </div>    
 </div>
