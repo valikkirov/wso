@@ -156,7 +156,10 @@ p {
 .land-block-category-img  img:hover {
   text-decoration: none;
   color: var(--accent-color);
-  transform: translateY(-20px);
+  border-radius:100px 50px 100px 50px;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  transition: all 1 ease;
 }
 
 .land-block-category-img:hover {
@@ -217,6 +220,35 @@ p {
 
 .land-article img {
   width: 100%;
+  margin: 15px 0;
+}
+
+.land-button {
+display: inline-block;
+padding: 15px 0;
+}
+
+.land-button:before {
+	content:'';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 100%;
+	background: rgba(255,255,255,0.3);
+	border-radius: 5px;
+	transition: all 1.4s ease;
+}
+
+.land-button:hover:before {
+  width: 100%;
+}
+
+.land-button img {
+  width: 60%;
+  display: flex;
+  margin: 0 auto;
+  transition-duration: 1s;
 }
 
 /* xs (<=543px) */
@@ -656,12 +688,11 @@ p {
         Magni ex, earum illo reprehenderit ad libero, voluptatum hic iste veniam soluta quibusdam deserunt nostrum iusto, dicta exercitationem omnis ipsum. Delectus repellendus mollitia eveniet. Praesentium repellat tempore porro quod quis.
       </p>
       <div class="row">
-        <div class="col-md-6">
-          <div class="land-button">
-            <img src="https://product-wso.ru/image/catalog/img/img-design/category-1.png">
-          </div>
+        <div class="col-md-12">
+          <a href="#" class="land-button">
+            <img src="https://product-wso.ru/image/catalog/img/img-design/button.png">
+          </a>
         </div>
-        <div class="col-md-6"></div>
       </div> 
     </div>
     <div class="col-sm-6">
