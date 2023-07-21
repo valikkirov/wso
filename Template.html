@@ -31,7 +31,7 @@ p {
   font-size: 1.5rem;
   line-height: 1.5;
   padding: 5px;
-  margin: 10px 0;
+  margin: 20px 0;
 }
 
 .land-banner-text {
@@ -72,7 +72,20 @@ p {
 .land-block-category-img_text img:hover {
   text-decoration: none;
   color: var(--accent-color);
-  transform: translateY(-20px);
+  -webkit-transform:scale(1.1); /* Safari and Chrome */
+  -moz-transform:scale(1.1); /* Firefox */
+  -ms-transform:scale(1.1); /* IE 9 */
+  -o-transform:scale(1.1); /* Opera */
+  transform:scale(1.1);
+  -webkit-filter: blur(1px);
+    -moz-filter: blur(1px);
+    -o-filter: blur(1px);
+    -ms-filter: blur(1px);
+  filter: blur(1px);
+}
+
+.land-block-category-img_text p {
+  padding: 30px 0;
 }
 
 .land-block-category-img_text p:hover {
@@ -81,6 +94,56 @@ p {
 
 .land-block-category-img_text:hover {
   text-decoration: none;
+}
+
+.land-block-ico-contact {
+  display: block;
+  text-decoration: none;
+  color: #000;
+  text-align: center;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+
+.land-block-ico-contact img {
+  width: 40%;
+  text-align: center;
+  margin: 0 auto;
+  transition-duration: 1s;
+  margin: 15px 0;
+}
+
+.land-block-ico-contact  p,
+.land-block-ico-contact  h3,
+.land-block-ico-contact  h4,
+.land-block-ico-contact  h5
+{
+  display: block;
+  text-decoration: none;
+  color: #000;
+  text-align: center;
+}
+
+.land-block-ico-contact img:hover {
+  text-decoration: none;
+  color: var(--accent-color);
+  transform: translateY(-20px);
+}
+
+.land-block-ico-contact:hover {
+  text-decoration: none;
+}
+
+.land-block-ico-contact a:hover {
+  text-decoration: none;
+}
+
+.land-block-ico-contact a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: normal;
+  font-size: 1.5rem;
+  padding: 10px 0;
 }
 
 .land-block-ico {
@@ -111,7 +174,7 @@ p {
   text-align: center;
 }
 
-.land-block-ico  img:hover {
+.land-block-ico img:hover {
   text-decoration: none;
   color: var(--accent-color);
   transform: translateY(-20px);
@@ -132,8 +195,24 @@ p {
   font-size: 1.5rem;
 }
 
+
+.land-block-ico:hover img {
+  margin-top: -1px;
+}
+
+.land-block-ico:hover img{
+  box-shadow: 1px 1px 15px 0 rgba(0,0,0,.2);
+}
+
 .h3-block {
   font-size: 2.4rem;
+  color: var(--accent-color);
+  text-align: center;
+  display: block!important;
+}
+
+.h2-block {
+  font-size: 3rem;
   color: var(--accent-color);
   text-align: center;
   display: block!important;
@@ -153,10 +232,19 @@ p {
   transition-duration: 1s;
 }
 
-.land-block-category-img  img:hover {
+.land-block-category-img img:hover {
   text-decoration: none;
   color: var(--accent-color);
-  border-radius:100px 50px 100px 50px;
+  -webkit-transform:scale(1.1); /* Safari and Chrome */
+  -moz-transform:scale(1.1); /* Firefox */
+  -ms-transform:scale(1.1); /* IE 9 */
+  -o-transform:scale(1.1); /* Opera */
+  transform:scale(1.1);
+    -webkit-filter: blur(1px);
+    -moz-filter: blur(1px);
+    -o-filter: blur(1px);
+    -ms-filter: blur(1px);
+  filter: blur(1px);
   -webkit-transition: all 1s ease;
   -moz-transition: all 1s ease;
   transition: all 1 ease;
@@ -223,33 +311,44 @@ p {
   margin: 15px 0;
 }
 
-.land-button {
+/* Кнопка */
+
+.land-button img {
 display: inline-block;
 padding: 15px 0;
 }
 
-.land-button:before {
-	content:'';
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 0;
-	height: 100%;
-	background: rgba(255,255,255,0.3);
-	border-radius: 5px;
-	transition: all 1.4s ease;
-}
-
-.land-button:hover:before {
-  width: 100%;
-}
-
 .land-button img {
-  width: 60%;
-  display: flex;
-  margin: 0 auto;
+  width: 50%;
   transition-duration: 1s;
 }
+
+.land-button img:hover {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  filter: grayscale(50%);
+  width: 32vw;
+  transition: width 0.5s ease;
+}
+
+/* Баннер на всю ширину: картинка и снизу текст */
+
+.land-banner-img-text {
+  display: inline-block;
+  margin: 15px 0;
+}
+
+.land-banner-img-text img {
+  margin: 15px 0 5px 0;
+}
+
+.land-banner-img-text p {
+  width: 100%;
+  margin: 15px 0;
+}
+
 
 /* xs (<=543px) */
 @media (max-width: 575px) { 
@@ -266,6 +365,10 @@ padding: 15px 0;
     font-size: 3.2rem;
   }
 
+  .h2-block {
+  font-size: 3.6em;
+  }
+
     .land-block-ico-fontawesome a {
     font-size: 1.7rem;
   }
@@ -275,8 +378,21 @@ padding: 15px 0;
   }
 
   .land-block-ico img {
-    width: 30%;
+    width: 25%;
   }
+  
+  .land-block-ico-contact img {
+    width: 25%;
+  }
+
+  .land-button img:hover {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    filter: grayscale(50%);
+    width: 55%;
+}
 
  }
 
@@ -295,6 +411,10 @@ padding: 15px 0;
     font-size: 3rem;
   }
 
+  .h2-block {
+  font-size: 3.4em;
+  }
+
   .land-block-ico-fontawesome a {
     font-size: 1.5rem;
   }
@@ -304,7 +424,11 @@ padding: 15px 0;
   }
 
   .land-block-ico img {
-    width: 35%;
+    width: 30%;
+  }
+
+  .land-block-ico-contact img {
+  width: 30%;
   }
 
  }
@@ -332,6 +456,14 @@ padding: 15px 0;
     font-size: 2.8rem;
   }
 
+  .h2-block {
+  font-size: 3.1em;
+  }
+
+  .land-block-ico-contact img {
+  width: 34%;
+  }
+
  }
 
 /* lg (>=992 и <=1199) */
@@ -357,6 +489,14 @@ padding: 15px 0;
     font-size: 2.6rem;
   }
 
+  .h2-block {
+  font-size: 2.8rem;
+  }
+
+  .land-block-ico-contact img {
+  width: 36%;
+  }
+
  }
 
 /* xl (>=1200) */
@@ -371,7 +511,7 @@ padding: 15px 0;
 <div class="row">
   <div class="col-md-12">
     <div class="land-banner-img">
-      <img src="https://product-wso.ru/image/catalog/img/img-design/1.png" style="width: 100%;">
+      <img src="https://gdr.one/simg/1200x300">
     </div>
   </div>
 </div>
@@ -384,27 +524,23 @@ padding: 15px 0;
 
   <div class="col-md-6 col-sm-12">
     <div class="row">
-      <div class="col-md-2"><img src="https://product-wso.ru/image/catalog/img/img-design/sqare.png"></div>
-      <div class="col-md-10"><h2>НЕМНОГО О ЛОНГБОРДАХ</h2></div>
+      <div class="col-md-2"><img src="https://gdr.one/simg/70x70"></div>
+      <div class="col-md-10"><h2>Заголовок</h2></div>
     </div>
       <p class="text-block">
-      Лонгборд (longboard) представляет собой более длинную версию стандартного скейтборда, и длина доски составляет
-      90-120 см или 35-47 дюймов. Такие доски для катания подходят для круизинга, гонок, стиля даунхилл, 
-      также могут использоваться просто как вид транспорта.
+     Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, veritatis. Incidunt similique ratione vero eligendi placeat accusantium magni iusto, asperiores soluta nulla fugit sed sapiente minus inventore ea assumenda facilis?
       </p>
   </div>
 
 <div class="col-md-6 col-sm-12">
   <div class="row">
     <div class="col-md-2">
-      <img src="https://product-wso.ru/image/catalog/img/img-design/sqare.png">
+      <img src="https://gdr.one/simg/70x70">
     </div>
-    <div class="col-md-10"><h2>КАКИЕ БЫВАЮТ ЛОНГБОРДЫ</h2></div>
+    <div class="col-md-10"><h2>Заголовок</h2></div>
   </div>
     <p class="text-block">
-     Лонгборд (longboard) представляет собой более длинную версию стандартного скейтборда, и длина доски составляет
-     90-120 см или 35-47 дюймов. Такие доски для катания подходят для круизинга, гонок, стиля даунхилл, также могут
-     использоваться просто как вид транспорта.
+Lorem ipsum dolor sit amet consectetur adipisicing elit. In eius cupiditate dolorum ipsum magni tempora explicabo atque tempore facere quis odio tenetur repellendus ducimus iusto maxime esse, voluptas vitae quidem!
     </p>
 </div>
 
@@ -412,115 +548,223 @@ padding: 15px 0;
 
 <div class="row">
   <div class="col-md-12">
-    <div class="land-banner-img"><img src="https://product-wso.ru/image/catalog/img/img-design/row100.png" style="width: 100%;">
+    <div class="land-banner-img"><img src="https://gdr.one/simg/1000x10">
   </div>
   </div>
 </div>
   
 
 <div class="row">
-
   <div class="col-md-12">
     <div class="land-banner-text">
       <p class="text-block">
-        По сравнению со скейтбордом, лонгборд обеспечивает мягкую езду и имеет интегрированные элементы из серфинга, 
-        что дает при катании особенные ощущения. В нашей компании можно купить качественное оснащение для райдеров.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit enim ipsa recusandae tempora illum, fuga aperiam quidem atque dignissimos numquam dolorum nihil, quo a dolores doloremque suscipit architecto molestiae quisquam.
+        Doloribus blanditiis nam eum perferendis, doloremque incidunt hic? Repellendus et, nulla quos fuga debitis velit maiores? Hic perferendis inventore aliquid alias ipsum, cupiditate blanditiis dolores, maiores, qui soluta doloremque similique.
       </p>
     </div>
   </div>
+</div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="land-banner-img"><img src="https://gdr.one/simg/1000x10">
+    </div>
+    </div>
+  </div>
  
-    
+<div class="row">
   <div class="col-md-4 col-sm-6">
     <a href="#" class="land-block-category-img_text">
-    <img src="https://product-wso.ru/image/catalog/img/img-design/ico1.png">
+    <img src="https://gdr.one/simg/500x500">
     <p>
-      Круизер для круизинга и транспортировки. Напоминают доску для серфинга, идеальны 
-      для мягкого и быстрого катания.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi vero minus blanditiis ad voluptates adipisci consequuntur nobis neque eos eaque fugiat dicta ab, aperiam reiciendis officiis qui, illo harum nam.
     </p>
     </a>
   </div>
     
   <div class="col-md-4 col-sm-6">
     <a href="#" class="land-block-category-img_text">
-    <img src="https://product-wso.ru/image/catalog/img/img-design/ico2.png">
+    <img src="https://gdr.one/simg/500x500">
     <p>
-      Карвинг для пампа на асфальте. С таким лонгбордом можно делать лучшие толчки, ощущая себя как 
-      на сноуборде с порошковым снегом, или кататься, словно на серфе.
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe asperiores nihil commodi reprehenderit id. Provident ullam rerum fugit temporibus eligendi necessitatibus possimus voluptas nihil molestias expedita? Aspernatur nam dignissimos delectus.
     </p>
     </a>
   </div>
     
   <div class="col-md-4 col-sm-6">
     <a href="#" class="land-block-category-img_text">
-    <img src="https://product-wso.ru/image/catalog/img/img-design/ico3.png">
+    <img src="https://gdr.one/simg/500x500">
     <p>
-      Денсинг лонгборды подходят для танца во время катания и развития чувства баланса. 
-      Еще такие модели подходят для передвижения на дальние расстояния, так как развивают хорошую скорость.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere expedita ut suscipit consequuntur alias quo, non nemo odio eius delectus deleniti earum quibusdam ipsa rem, maiores commodi, iure officia totam!
     </p>
     </a>
   </div>
     
   <div class="col-md-4 col-sm-6">
     <a href="#" class="land-block-category-img_text">
-    <img src="https://product-wso.ru/image/catalog/img/img-design/ico4.png" style="width: 60%;">
+    <img src="https://gdr.one/simg/500x500">
     <p>
-      Фристайл доски предназначены для мягкого катания и трюков.
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil aliquid mollitia quas velit quaerat placeat debitis earum nisi quae aperiam nulla perspiciatis nesciunt amet laudantium eveniet, consequatur eius. Quisquam, beatae?
     </p>
     </a>
   </div>
     
   <div class="col-md-4 col-sm-6">
     <a href="#" class="land-block-category-img_text">
-    <img src="https://product-wso.ru/image/catalog/img/img-design/ico5.png">
+    <img src="https://gdr.one/simg/500x500">
     <p>
-      Фрирайд для слайдов во время даунхилла или на плоской поверхности и других трюков.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur tempore excepturi amet odio voluptates! Ipsum nulla, dolor reprehenderit, officia repudiandae, quibusdam rerum maxime est atque ullam mollitia earum natus quae!
     </p>
     </a>
   </div>
     
   <div class="col-md-4 col-sm-6">
     <a href="#" class="land-block-category-img_text">
-    <img src="https://product-wso.ru/image/catalog/img/img-design/ico6.png">
+    <img src="https://gdr.one/simg/500x500">
     <p>
-      Даунхилл — жесткие устойчивые модели, оптимальные для спусков на склонах.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid enim sed voluptatibus sunt, ex velit eos aut quo voluptatem quibusdam fugit dolor sequi expedita impedit consequuntur voluptates porro. Ratione, delectus.
     </p>
        </a>
    </div>
     
 </div>
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="land-banner-img"><img src="https://gdr.one/simg/1000x10">
+  </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="land-banner-text">
+      <p class="text-block">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit enim ipsa recusandae tempora illum, fuga aperiam quidem atque dignissimos numquam dolorum nihil, quo a dolores doloremque suscipit architecto molestiae quisquam.
+        Doloribus blanditiis nam eum perferendis, doloremque incidunt hic? Repellendus et, nulla quos fuga debitis velit maiores? Hic perferendis inventore aliquid alias ipsum, cupiditate blanditiis dolores, maiores, qui soluta doloremque similique.
+      </p>
+    </div>
+  </div>
+</div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="land-banner-img"><img src="https://gdr.one/simg/1000x10">
+    </div>
+    </div>
+  </div>
+ 
+<div class="row">
+
+  <div class="col-md-4 col-sm-6">
+    <div class="land-block-category-img_text">
+    <img src="https://gdr.one/simg/500x500">
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi vero minus blanditiis ad voluptates adipisci consequuntur nobis neque eos eaque fugiat dicta ab, aperiam reiciendis officiis qui, illo harum nam.
+    </p>
+  </div>
+  </div>
+    
+  <div class="col-md-4 col-sm-6">
+    <div class="land-block-category-img_text">
+    <img src="https://gdr.one/simg/500x500">
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe asperiores nihil commodi reprehenderit id. Provident ullam rerum fugit temporibus eligendi necessitatibus possimus voluptas nihil molestias expedita? Aspernatur nam dignissimos delectus.
+    </p>
+  </div>
+  </div>
+    
+  <div class="col-md-4 col-sm-6">
+    <div class="land-block-category-img_text">
+    <img src="https://gdr.one/simg/500x500">
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere expedita ut suscipit consequuntur alias quo, non nemo odio eius delectus deleniti earum quibusdam ipsa rem, maiores commodi, iure officia totam!
+    </p>
+  </div>
+  </div>
+  
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="land-banner-img">
+      <img src="https://gdr.one/simg/1000x10">
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  
+  <div class="col-md-3 col-sm-6">
+    <div class="land-block-category-img_text">
+    <img src="https://gdr.one/simg/500x500">
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi vero minus blanditiis ad voluptates adipisci consequuntur nobis neque eos eaque fugiat dicta ab, aperiam reiciendis officiis qui, illo harum nam.
+    </p>
+  </div>
+  </div>
+    
+  <div class="col-md-3 col-sm-6">
+    <div class="land-block-category-img_text">
+    <img src="https://gdr.one/simg/500x500">
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe asperiores nihil commodi reprehenderit id. Provident ullam rerum fugit temporibus eligendi necessitatibus possimus voluptas nihil molestias expedita? Aspernatur nam dignissimos delectus.
+    </p>
+  </div>
+  </div>
+    
+  <div class="col-md-3 col-sm-6">
+    <div class="land-block-category-img_text">
+    <img src="https://gdr.one/simg/500x500">
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere expedita ut suscipit consequuntur alias quo, non nemo odio eius delectus deleniti earum quibusdam ipsa rem, maiores commodi, iure officia totam!
+    </p>
+  </div>
+  </div>
+
+  <div class="col-md-3 col-sm-6">
+    <div class="land-block-category-img_text">
+    <img src="https://gdr.one/simg/500x500">
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere expedita ut suscipit consequuntur alias quo, non nemo odio eius delectus deleniti earum quibusdam ipsa rem, maiores commodi, iure officia totam!
+    </p>
+  </div>
+  </div>
+  
+</div>
   
 <div class="row">
   <div class="col-md-12">
     <div class="land-banner-img">
-      <img src="https://product-wso.ru/image/catalog/img/img-design/row100.png">
+      <img src="https://gdr.one/simg/1000x10">
     </div>
   </div>
 </div>
 
 <div class="row">
   <div class="col-md-12">
-    <h3 class="h3-block">Почему лонгборды?</h3>
+    <h2 class="h2-block">Заголовок</h2>
   </div>
 </div>
   
 <div class="row">
   <div class="col-md-4 col-sm-6">
     <div class="land-block-ico">
-      <img src="https://product-wso.ru/image/catalog/img/img-design/ico1.png">
-      <h4>Удобные в управлении</h4>
+      <img src="https://gdr.one/simg/500x500">
+      <h4>Lorem ipsum dolor sit amet</h4>
     </div>
   </div>
   <div class="col-md-4 col-sm-6">
     <div class="land-block-ico">
-      <img src="https://product-wso.ru/image/catalog/img/img-design/ico2.png">
-       <h4>Безопасные при катании</h4>
+      <img src="https://gdr.one/simg/500x500">
+       <h4>Lorem ipsum dolor sit amet</h4>
     </div>
   </div>
     
   <div class="col-md-4 col-sm-6">
     <div class="land-block-ico">
-      <img src="https://product-wso.ru/image/catalog/img/img-design/ico3.png" >
-      <h4>Эргономичный дизайн</h4>
+      <img src="https://gdr.one/simg/500x500" >
+      <h4>Lorem ipsum dolor sit amet</h4>
     </div>
   </div>
 </div>
@@ -535,7 +779,7 @@ padding: 15px 0;
 
 <div class="row">
   <div class="col-md-12">
-    <h3 class="h3-block">Категории</h3>
+    <h2 class="h2-block">Категории</h2>
   </div>
 </div>
   
@@ -575,23 +819,16 @@ padding: 15px 0;
   
 <div class="row">
   <div class="col-md-12">
-    <div class="land-banner-img">
+    <div class="land-banner-img-text">
     <img src="https://product-wso.ru/image/catalog/img/img-design/2.png" style="width: 100%;">
+    <p>
+      Лонгборды можно купить по выгодной цене в Саратове с доставкой по России в компании «МотоФишка». Мы поставляем качественные и удобные варианты досок от проверенного производителя Vacuba и предлагаем широкий выбор бордов разной конфигурации для стиля катания, который вам по душе.
+    </p>
     </div>
   </div>
 </div>
   
 
-  
-<div class="row">
-<div class="col-md-12">
-  <div class="land-banner-text">
-  <p class="text-block">
-    Лонгборды можно купить по выгодной цене в Саратове с доставкой по России в компании «МотоФишка». Мы поставляем качественные и удобные варианты досок от проверенного производителя Vacuba и предлагаем широкий выбор бордов разной конфигурации для стиля катания, который вам по душе.
-  </p>
-  </div>
-  </div>
-</div>
   
 <div class="row">
     <div class="col-md-12">
@@ -611,7 +848,7 @@ padding: 15px 0;
   </div>
     
   <div class="col-md-4">
-    <div class="land-block-ico">
+    <div class="land-block-ico-contact">
       <div class="col-md-12">
         <img src="https://product-wso.ru/image/catalog/img/img-design/pointer.png">
       </div>
@@ -622,7 +859,7 @@ padding: 15px 0;
   </div>
     
   <div class="col-md-4">
-    <div class="land-block-ico">
+    <div class="land-block-ico-contact">
       <div class="col-md-12">
         <img src="https://product-wso.ru/image/catalog/img/img-design/mail.png">
       </div>
@@ -633,7 +870,7 @@ padding: 15px 0;
   </div>
     
   <div class="col-md-4">
-    <div class="land-block-ico">
+    <div class="land-block-ico-contact">
       <div class="col-md-12">
         <img src="https://product-wso.ru/image/catalog/img/img-design/phone.png">
       </div>
@@ -652,7 +889,8 @@ padding: 15px 0;
       <img src="https://product-wso.ru/image/catalog/img/img-design/category-1.png">
     </div>
     <div class="col-sm-6">
-      <p>
+      <h3 class="h3-block">Заголовок</h3>
+      <p class="text-block">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia totam deleniti, deserunt corporis aspernatur pariatur, repudiandae labore obcaecati quod eligendi quia modi praesentium ratione nam recusandae blanditiis doloribus reprehenderit iusto?
         Consequuntur minus possimus molestiae temporibus voluptatibus consequatur tenetur, nostrum dolores repudiandae dicta earum libero ullam, velit excepturi. Laboriosam hic ipsa reprehenderit quidem. Consequuntur eum asperiores ipsa ex sapiente quos ipsam?
         Non impedit excepturi labore quod, blanditiis tempora minus cum eum magnam perspiciatis dolorum maxime, debitis ratione consequatur asperiores neque quas molestias nam necessitatibus architecto, voluptates eligendi! Nam deleniti a soluta!
@@ -661,13 +899,12 @@ padding: 15px 0;
         Obcaecati asperiores quaerat dolorum voluptatum non omnis? Velit quasi ab est nobis nulla illo temporibus soluta hic magnam ea odio, earum ad libero quia laborum provident iste in, eos qui?
       </p>
       <div class="row">
-        <div class="col-md-6">
-          <div class="land-button">
-            
-          </div>
+        <div class="col-md-12">
+          <a href="#" class="land-button">
+            <img src="https://product-wso.ru/image/catalog/img/img-design/button.png">
+          </a>
         </div>
-        <div class="col-md-6"></div>
-      </div>
+      </div> 
     </div>
     </div>
   </div>    
@@ -681,11 +918,10 @@ padding: 15px 0;
   <div class="land-article">
     <div class="row">
     <div class="col-sm-6">
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia totam deleniti, deserunt corporis aspernatur pariatur, repudiandae labore obcaecati quod eligendi quia modi praesentium ratione nam recusandae blanditiis doloribus reprehenderit iusto?
+      <h3 class="h3-block">Заголовок</h3>
+      <p class="text-block">
         Consequuntur minus possimus molestiae temporibus voluptatibus consequatur tenetur, nostrum dolores repudiandae dicta earum libero ullam, velit excepturi. Laboriosam hic ipsa reprehenderit quidem. Consequuntur eum asperiores ipsa ex sapiente quos ipsam?
         Non impedit excepturi labore quod, blanditiis tempora minus cum eum magnam perspiciatis dolorum maxime, debitis ratione consequatur asperiores neque quas molestias nam necessitatibus architecto, voluptates eligendi! Nam deleniti a soluta!
-        Magni ex, earum illo reprehenderit ad libero, voluptatum hic iste veniam soluta quibusdam deserunt nostrum iusto, dicta exercitationem omnis ipsum. Delectus repellendus mollitia eveniet. Praesentium repellat tempore porro quod quis.
       </p>
       <div class="row">
         <div class="col-md-12">
@@ -694,6 +930,50 @@ padding: 15px 0;
           </a>
         </div>
       </div> 
+    </div>
+    <div class="col-sm-6">
+      <img src="https://product-wso.ru/image/catalog/img/img-design/category-1.png">
+    </div>
+    </div>
+  </div>    
+</div>
+
+<div class="row">
+  <div class="land-article">
+    <div class="row">
+    <div class="col-sm-6">
+      <img src="https://product-wso.ru/image/catalog/img/img-design/category-1.png">
+    </div>
+    <div class="col-sm-6">
+      <h3 class="h3-block">Заголовок</h3>
+      <p class="text-block">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia totam deleniti, deserunt corporis aspernatur pariatur, repudiandae labore obcaecati quod eligendi quia modi praesentium ratione nam recusandae blanditiis doloribus reprehenderit iusto?
+        Consequuntur minus possimus molestiae temporibus voluptatibus consequatur tenetur, nostrum dolores repudiandae dicta earum libero ullam, velit excepturi. Laboriosam hic ipsa reprehenderit quidem. Consequuntur eum asperiores ipsa ex sapiente quos ipsam?
+        Non impedit excepturi labore quod, blanditiis tempora minus cum eum magnam perspiciatis dolorum maxime, debitis ratione consequatur asperiores neque quas molestias nam necessitatibus architecto, voluptates eligendi! Nam deleniti a soluta!
+        Magni ex, earum illo reprehenderit ad libero, voluptatum hic iste veniam soluta quibusdam deserunt nostrum iusto, dicta exercitationem omnis ipsum. Delectus repellendus mollitia eveniet. Praesentium repellat tempore porro quod quis.
+        Dolor quis vel et sed inventore! Eligendi et molestias odit. Ex in quam nostrum animi distinctio natus facere neque accusantium perspiciatis! Accusantium, esse nam consequuntur iure maiores quisquam fugit ratione.
+        Obcaecati asperiores quaerat dolorum voluptatum non omnis? Velit quasi ab est nobis nulla illo temporibus soluta hic magnam ea odio, earum ad libero quia laborum provident iste in, eos qui?
+      </p>
+
+    </div>
+    </div>
+  </div>    
+</div>
+
+<div class="row">
+  <div class="col-md-12"><p>&nbsp;</p></div>
+</div>
+
+<div class="row">
+  <div class="land-article">
+    <div class="row">
+    <div class="col-sm-6">
+      <h3 class="h3-block">Заголовок</h3>
+      <p class="text-block">
+        Consequuntur minus possimus molestiae temporibus voluptatibus consequatur tenetur, nostrum dolores repudiandae dicta earum libero ullam, velit excepturi. Laboriosam hic ipsa reprehenderit quidem. Consequuntur eum asperiores ipsa ex sapiente quos ipsam?
+        Non impedit excepturi labore quod, blanditiis tempora minus cum eum magnam perspiciatis dolorum maxime, debitis ratione consequatur asperiores neque quas molestias nam necessitatibus architecto, voluptates eligendi! Nam deleniti a soluta!
+      </p>
+
     </div>
     <div class="col-sm-6">
       <img src="https://product-wso.ru/image/catalog/img/img-design/category-1.png">
