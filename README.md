@@ -56,3 +56,28 @@ C [документацией по Bootstrap](https://bootstrap-5.ru/docs/5.3/la
 
 
 Просмотр блока в live режиме в Codepen: https://codepen.io/qbqgigys-the-looper/pen/rNQKGOL
+
+---
+
+2.2) Отступ между блоками. Вставляется код, который создает пустое место между блоками. Вставляем необходимое количество, чтобы получить заданыый отступ.
+
+    <div class="row">
+        <div class="col-md-12"><p>&nbsp;</p></div>
+    </div>
+
+---
+
+2.3) Текстовый блок на всю ширину.
+
+    <div class="row">
+    <div class="col-md-12">
+        <div class="land-banner-text">
+        <p class="text-block">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit      enim ipsa recusandae tempora illum, fuga aperiam quidem atque      dignissimos numquam dolorum nihil, quo a dolores doloremque suscipit     architecto molestiae quisquam.
+            Doloribus blanditiis nam eum perferendis, doloremque incidunt hic?     Repellendus et, nulla quos fuga debitis velit maiores? Hic     perferendis inventore aliquid alias ipsum, cupiditate blanditiis  dolores, maiores, qui soluta doloremque similique.
+        </p>
+        </div>
+    </div>
+    </div>
+
+Заменяем "рыбный" текст между `<p class="text-block">` и `</p>`
